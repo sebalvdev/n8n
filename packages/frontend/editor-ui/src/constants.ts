@@ -324,9 +324,6 @@ export const NODE_CONNECTION_TYPE_ALLOW_MULTIPLE: NodeConnectionType[] = [
 	NodeConnectionTypes.Main,
 ];
 
-// General
-export const INSTANCE_ID_HEADER = 'n8n-instance-id';
-
 /** PERSONALIZATION SURVEY */
 export const EMAIL_KEY = 'email';
 export const WORK_AREA_KEY = 'workArea';
@@ -919,8 +916,6 @@ export const IsInPiPWindowSymbol = 'IsInPipWindow' as unknown as InjectionKey<
 >;
 
 /** Auth */
-export const BROWSER_ID_STORAGE_KEY = 'n8n-browserId';
-
 export const APP_MODALS_ELEMENT_ID = 'app-modals';
 
 export const AI_NODES_PACKAGE_NAME = '@n8n/n8n-nodes-langchain';
