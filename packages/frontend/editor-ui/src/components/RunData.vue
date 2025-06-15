@@ -820,15 +820,14 @@ function getNodeHints(): NodeHint[] {
 
 	return [];
 }
-function getConsolidatedHint(): { message: string; type: string } | null {
+function getConsolidatedHint(): { message: string } | null {
 	if (node.value?.disabled) {
 		return {
 			message: i18n.baseText('ndv.nodeHints.disabled'),
-			type: 'info',
 		};
 	}
 	if (
-		canPinData &&
+		canPinData.value &&
 		pinnedData.hasData.value &&
 		!editMode.value?.enabled &&
 		!props.isProductionExecutionPreview
@@ -879,7 +878,6 @@ function getConsolidatedHint(): { message: string; type: string } | null {
 	if (activeSettings.length === 1) {
 		return {
 			message: activeSettings[0].message,
-			type: 'info',
 		};
 	}
 
@@ -914,7 +912,6 @@ function getConsolidatedHint(): { message: string; type: string } | null {
 
 	return {
 		message: consolidatedMessage,
-		type: 'info',
 	};
 }
 function onItemHover(itemIndex: number | null) {
