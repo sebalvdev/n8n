@@ -9,11 +9,14 @@ WORKDIR /usr/src/app
 # Copiar todo el código
 COPY . .
 
-# Instalar dependencias respetando monorepo/workspaces
-RUN pnpm install --frozen-lockfile
+# Instalar dependencias
+RUN pnpm install
 
-# Exponer el puerto estándar
+# Construir n8n
+RUN pnpm build
+
+# Exponer el puerto
 EXPOSE 5678
 
-# Comando para iniciar n8n
+# Comando de inicio
 CMD ["pnpm", "start"]
