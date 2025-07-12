@@ -9,14 +9,17 @@ WORKDIR /usr/src/app
 # Copiar todo el código
 COPY . .
 
+# Desactivar scripts postinstall que están fallando
+ENV PNPM_SKIP_POSTINSTALL=1
+
 # Instalar dependencias
 RUN pnpm install
 
-# Construir n8n
+# Compilar el proyecto
 RUN pnpm build
 
-# Exponer el puerto
+# Exponer el puerto estándar
 EXPOSE 5678
 
-# Comando de inicio
+# Comando para iniciar
 CMD ["pnpm", "start"]
