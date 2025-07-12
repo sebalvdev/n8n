@@ -13,9 +13,9 @@ packages/**/*.test.*
 .gitignore
 !.github/scripts
 *.tsbuildinfo
-docker/compose
-docker/**/Dockerfile
-Dockerfile
+# docker/compose
+# docker/**/Dockerfile
+# Dockerfile
 .vscode
 cypress
 test-workflows
