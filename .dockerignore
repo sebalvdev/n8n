@@ -10,10 +10,12 @@ packages/**/.turbo
 packages/**/*.test.*
 .git
 .github
+.gitignore
 !.github/scripts
 *.tsbuildinfo
 docker/compose
 docker/**/Dockerfile
+Dockerfile
 .vscode
 cypress
 test-workflows
